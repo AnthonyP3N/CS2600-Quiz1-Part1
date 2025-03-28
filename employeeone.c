@@ -31,8 +31,7 @@ PtrToEmployee searchEmployeeGeneric(const Employee table[], int sizeTable, void 
     return NULL;
 }
 
-int compareByPhone(PtrToConstEmployee emp, void *targetPhone) {
-    return strcmp(emp->phone, (char *)targetPhone) == 0;
+
+int compareBySalary(PtrToConstEmployee emp, void *targetSalary) {
+    return emp->salary == *(double *)targetSalary;
 }
-
-
